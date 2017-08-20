@@ -1,0 +1,39 @@
+I"ÿ(function() {
+  app.service('MainService', [
+    '$http', 'localStorageService', function(http, localStorage) {
+      this.selectByCheckService = function(scope, usersCount) {
+        if (scope.check.length > 0) {
+          scope.btnDelete = true;
+          scope.iconCheck = "indeterminate_check_box";
+          scope.tooltipCheck = "Deseleccionar";
+          console.log(usersCount);
+          if (scope.check.length === usersCount) {
+            scope.iconCheck = "check_box";
+            scope.tooltipCheck = "Deseleccionar todo";
+          }
+        } else {
+          scope.btnDelete = false;
+          scope.iconCheck = "check_box_outline_blank";
+          scope.tooltipCheck = "Seleccionar todo";
+        }
+      };
+      this.selectAllService = function(scope, users) {
+        if (scope.check.length === 0) {
+          users.filter(function(element) {
+            scope.check.push(element.id);
+          });
+          scope.btnDelete = true;
+          scope.iconCheck = "check_box";
+          scope.tooltipCheck = "Deseleccionar todo";
+        } else {
+          scope.check = [];
+          scope.iconCheck = "check_box_outline_blank";
+          scope.tooltipCheck = "Seleccionar todo";
+          scope.btnDelete = false;
+        }
+      };
+    }
+  ]);
+
+}).call(this);
+:ET

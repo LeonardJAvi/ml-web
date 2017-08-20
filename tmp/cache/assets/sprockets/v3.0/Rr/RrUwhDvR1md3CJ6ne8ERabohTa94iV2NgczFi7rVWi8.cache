@@ -1,0 +1,40 @@
+I"(function() {
+  app.controller('MainCtrl', [
+    '$scope', "$compile", "$http", "$timeout", 'MainService', function(scope, $compile, $http, $timeout, MainService) {
+      scope.sidebar = false;
+      scope.btnDelete = false;
+      scope.check = [];
+      scope.iconCheck = "check_box_outline_blank";
+      scope.tooltipCheck = "Seleccionar todo";
+      scope.selectByCheck = function(usersCount) {
+        MainService.selectByCheckService(scope, usersCount);
+      };
+      scope.selectAll = function(users) {
+        MainService.selectAllService(scope, users);
+      };
+      scope.searchSiwtch = function() {
+        scope.inputSearch = !scope.inputSearch;
+      };
+      scope.searchSiwtch = function() {
+        scope.inputSearch = !scope.inputSearch;
+      };
+      scope.spinnerReload = function() {
+        $(".spinner-refresh").addClass("rotate");
+      };
+      scope.sidebarSwitch = function() {
+        scope.sidebar = !scope.sidebar;
+      };
+      scope.sidebarClose = function() {
+        scope.sidebar = false;
+      };
+      scope.compiledHTML = function(el) {
+        $compile(el)(scope);
+        scope.$apply;
+      };
+      jQuery(document).on('page:fetch', function() {});
+      return jQuery(document).on('page:receive', function() {});
+    }
+  ]);
+
+}).call(this);
+:ET

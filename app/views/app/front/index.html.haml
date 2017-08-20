@@ -1,0 +1,131 @@
+!!!
+%html
+  %head
+    = render 'app/layouts/head'
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    -# %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %title Diseños - Maru León
+    -# %link{:href => "assets/img/favicon-maru.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
+    %link{:href => "assets/css/base.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/index.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/bootstrap-theme.min.css", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Pangolin", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Pacifico", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i", :rel => "stylesheet"}/
+    %link{:href => "assets/css/font-awesome.css", :rel => "stylesheet"}/
+  %body
+    .el-container.hidden-sm.hidden-xs
+      .el-brand-box
+        %a{:href => "#", :onclick => "openModal()"}
+          %img#info.img-circle.img-responsive{:src => "assets/img/logo-maru.png"}/
+    .header-mobile.hidden-lg.hidden-md
+      .el-container-mobile
+        .el-brand-box-mobile
+          %a{:href => "#", :onclick => "openModal()"}
+            %img#info.img-circle.img-responsive{:src => "assets/img/logo-maru.png"}/
+    %section.el-control
+      .row
+        #stage-1.col-lg-6.col-md-6.col-sm-12.col-xs-12.option
+          .stage-mask
+            %span.style-all Maru León Damas
+            %p.description Destaca en cualquier ocasión y luce espectacular.
+            %a{:href => "https://maruleon.typeform.com/to/q51qF6", :target => "_blank"}
+              %button#btn-woman.btn.btn-style-link{:href => "https://maruleon.typeform.com/to/q51qF6", :type => "button"} Comprar    
+        #stage-2.col-lg-6.col-md-6.col-sm-12.col-xs-12.option
+          .stage-mask
+            %span.style-all Maru León Caballeros
+            %p.description Urbanos, versátiles y a la moda. Nuestra calidad te hará disfrutar de tus  grandes momentos.
+            %a{:href => "https://maruleon.typeform.com/to/eAa9oA", :target => "_blank"}
+              %button#btn-woman.btn.btn-style-link{:href => "https://maruleon.typeform.com/to/q51qF6", :type => "button"} Comprar 
+        #stage-3.col-lg-6.col-md-6.col-sm-12.col-xs-12.option
+          .stage-mask
+            %span.style-all Maru León Kids
+            %p.description Para los más pequeños diseños especiales y divertidos.
+            %a{:href => "https://maruleon.typeform.com/to/VGrUTx", :target => "_blank"}
+              %button#btn-woman.btn.btn-style-link{:href => "https://maruleon.typeform.com/to/q51qF6", :type => "button"} Comprar 
+        #stage-4.col-lg-6.col-md-6.co.l-sm-12.col-xs-12.option
+          .stage-mask
+            %span.style-all Maru León Pets
+            %p.description Porque ellos son los consentidos del hogar, llévalos contigo #combinaloscontumascota
+            %a{:href => "https://maruleon.typeform.com/to/vB4xJX", :target => "_blank"}
+              %button#btn-woman.btn.btn-style-link{:href => "https://maruleon.typeform.com/to/q51qF6", :type => "button"} Comprar 
+    %section#footer-credits
+      %div{:class => ".container-fluid"}
+        .footer.hidden-sm.hidden-xs
+          .copy
+            POWERED BY
+            %a{:href => "http://slicegroup.xyz/"}
+              %img.credits{:src => "assets/img/slicegroup.png"}/
+        .footer-mobile.hidden-lg.hidden-md
+          .copy-mobile
+            POWERED BY
+            %a{:href => "http://slicegroup.xyz/"}
+              %img.credits{:src => "assets/img/slicegroup.png"}/
+    / Modal's Start - Information
+    #myModal.modal.fade.services{"aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-lg
+        .modal-content
+          .modal-header
+            .modal-title.text-center Diseños - Maru León
+          .modal-body
+            %span.title-product ¿Quiénes Somos?
+            %p
+              Tienda Virtual con diseños únicos y coloridos, con el amor del trabajo hecho a mano.
+            %p
+              -# %strong Nuestra misión:
+              Nuestro anhelo es ser excelentes desde la primera vez. Somos accesorios versátiles y creativos, siempre cambiando y siempre con mucho estilo.
+            -# %p
+            -#   %strong Nuesta visión:
+            -#   Ser un flujo constante de diseños divertidos y creativos, siempre cambiando y siempre con estilo. Retros que se vuelven tendencias, porque tiene la chispa del trabajo a mano hecho con amor.
+            -# %p
+            -#   %strong Nuestros valores:
+            -#   Responsabilidad en la entrega, confianza de exclusividad, excelente atención personalizada, dedicación, amor y entusiasmo depositado en cada accesorio.
+            %p Siéntanse confiados, somos responsables en la entrega, excelentes en atención personalizada y dedicados en nuestro trabajo. Depositamos entusiasmo en cada accesorio.
+            %p Nos gustan sus opiniones y con ellas crear algo exclusivo, si tienes una idea, ¡exprésala! Nos encanta que nuestros clientes vuelvan a tocar las puertas de esta, su casa, BIENVENIDOS.
+            %span.title-product Nuestros accesorios impregnados de diseño Venezolano
+            .row
+              .col-lg-6.col-md-6.col-sm-6.col-xs-6
+                %ul.list-style-a
+                  %li.item-list
+                    %i.fa.fa-envira{"aria-hidden" => "true"}
+                    Brazaletes
+                  %li.item-list
+                    %i.fa.fa-envira{"aria-hidden" => "true"}
+                    Llaveros
+                  %li.item-list
+                    %i.fa.fa-envira{"aria-hidden" => "true"}
+                    Collares
+              .col-lg-6.col-md-6.col-sm-6.col-xs-6
+                %ul.list-style-b
+                  %li.item-list
+                    %i.fa.fa-envira{"aria-hidden" => "true"}
+                    Anillos
+                  %li.item-list
+                    %i.fa.fa-envira{"aria-hidden" => "true"}
+                    Zarcillos
+                  %li.item-list
+                    %i.fa.fa-envira{"aria-hidden" => "true"}
+                    Otros
+          .modal-footer
+            %span.title-contact Contáctanos
+            %span.title-email Escríbenos: info@maruleon.com.ve
+
+            %span.title-email contactomaruleon@gmail.com
+            .social
+              %a{:href => "https://www.facebook.com/Maru_Leon_-340198656360696/"}
+                %i.fa.fa-facebook.fa-2x{"aria-hidden" => "true"}
+              %a{:href => "https://www.instagram.com/maru_leon_/"}
+                %i.fa.fa-instagram.fa-2x{"aria-hidden" => "true"}
+              %a{:href => "https://twitter.com/maru_leon_"}
+                %i.fa.fa-twitter.fa-2x{"aria-hidden" => "true"}
+            %button.btn.btn-style-m{"data-dismiss" => "modal", :type => "button"} Cerrar
+    / Modal end
+    %script{:src => "assets/js/jquery-3.2.1.min.js"}
+    %script{:src => "assets/js/bootstrap.min.js"}
+    %script{:src => "assets/js/index.js"}
+
+

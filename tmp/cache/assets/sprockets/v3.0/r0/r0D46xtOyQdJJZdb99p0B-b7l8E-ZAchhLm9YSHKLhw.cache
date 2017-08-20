@@ -1,0 +1,29 @@
+I"Í(function() {
+  app.directive('resize', function() {
+    return function(scope, element) {
+      var w;
+      w = angular.element($(window));
+      scope.getWindowDimensions = function() {
+        return {
+          'h': w.height(),
+          'w': w.width()
+        };
+      };
+      scope.$watch(scope.getWindowDimensions, (function(newValue, oldValue) {
+        scope.windowHeight = newValue.h - 129;
+        scope.windowWidth = newValue.w;
+        scope.style = function() {
+          return {
+            'height': newValue.h + 'px',
+            'width': newValue.w + 'px'
+          };
+        };
+      }), true);
+      w.bind('resize', function() {
+        scope.$apply();
+      });
+    };
+  });
+
+}).call(this);
+:ET

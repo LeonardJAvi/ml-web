@@ -1,0 +1,590 @@
+.el-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.el-container .el-brand-box {
+  background: white;
+  border-radius: 50%;
+  height: 25rem;
+  width: 25rem;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  z-index: 3;
+  transform: scale(10);
+  -moz-animation: cicle 0.8s forwards; 
+  /* -moz-animation-delay: 2s*/
+  -webkit-animation: cicle 0.8s forwards; 
+  /*-webkit-animation-delay: 2s;*/
+  animation: cicle .5s forwards;
+  /* animation-delay: 0.5s;*/
+  margin-top: 5px;
+}
+
+@keyframes cicle {
+  from {transform: scale(10);}
+  to {transform: scale(1);}
+}
+
+.el-control {
+  background: #c0c0c0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.el-control .row {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.el-control .row .option {
+  height: 50%;
+  background: #000;
+  background-size: 100%;
+  background-position: center;
+   background-repeat: no-repeat;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+
+.header-mobile{
+  position: relative;
+  /* background-color: currentColor; */
+  width: 100%;
+  height: 170px;
+  top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.el-brand-box-mobile {
+    background: white;
+    border-radius: 50%;
+    height: 15rem;
+    width: 15rem;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+    transform: scale(10);
+    -moz-animation: cicle 0.8s forwards;
+    /* -moz-animation-delay: 2s; */
+    -webkit-animation: cicle 0.8s forwards;
+    /* -webkit-animation-delay: 2s; */
+    animation: cicle .5s forwards;
+    /* animation-delay: 0.5s; */
+}
+
+
+
+.el-container-mobile {
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stage-mask {
+  background:rgba(25, 22, 22, 0.55);
+  height: 100%;
+  padding: 50px;
+  color: white; 
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.6s ease;
+}
+
+.stage-mask p{
+  position: absolute;
+  top: 105px;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+#stage-1 {
+  background-image: url(../img/damas.jpg);
+  background-position: 0 80%;
+}
+
+#stage-2 {
+  background-image: url(../img/caballeros.jpg);
+  background-position: 0 97%;
+}
+
+#stage-3 {
+  background-image: url(../img/kids.jpg);
+   background-position: center;
+}
+
+#stage-4 {
+  background-image: url(../img/pets.jpg);
+   background-position: center;
+}
+
+
+img#info{
+  cursor: pointer;
+  border: 3px solid white;
+}
+
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 8px;
+    z-index: 9999;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.copy{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    color: white;
+    display: inline;
+    position: absolute;
+}
+
+img.credits{
+  width: 65px;
+  display: inline;
+}
+
+.footer-mobile{
+    height: 80px;
+    width: 100%;
+    padding: 0;
+    color: white;
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+
+.copy-mobile{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  display: inline;
+  height: 100%;
+  padding: 25px;
+}
+
+
+.style-all{
+  font-family: 'Pacifico', cursive;
+  font-weight: 500;
+  font-size: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 1s ease;
+
+}
+
+
+p.description{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+a{
+  width: 0px !important;
+  height: 0px !important;
+  outline: 0px !important;
+}
+
+#btn-woman{
+ /*  background-color: #f7cac9; */
+ background-color: #f1b7b6;
+}
+
+#btn-man{
+  /*   background-color: #ceb48d; */
+  background-color: #af946c;
+
+}
+
+#btn-kids{
+  /*  background-color: #92a8d1; */
+  background-color: #5498dc;
+}
+
+#btn-pets{
+  background-color: #62b788;
+}
+
+
+.el-control .row .option:hover {
+  background-size: 160%;
+  background-repeat: no-repeat;
+  /*  background-position: center; */
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.el-control .row .option:hover .style-all{
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%) translateY(-0%);
+  transition: all 0.6s ease;
+}
+
+.el-control .row .option:hover > .description {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.6s ease;
+  opacity: 1;
+}
+
+.el-control .row .option:hover .btn-style-link{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.6s ease;
+  opacity: 1;
+}
+
+
+.option:hover .stage-mask p{
+  opacity: 1;
+  transition: all 0.6s ease;
+  
+}
+
+.option:hover .stage-mask{
+ display: block;
+ transition: all 0.6s ease;
+}
+
+
+/****************************************
+Modal's Services - Star
+***************************************/
+
+.modal-content .modal-header {
+ padding: 0px !important; 
+}
+
+.services .modal-content{
+  background-color: rgb(31, 5, 25);  
+  background-image: url(../img/pru.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  padding:10px;
+
+}
+
+.modal-title {
+  font-family: 'Pacifico', cursive;
+  font-weight: 500;
+  font-size: 32px;
+  color: white;
+}
+
+
+.modal-body span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+}
+
+
+span.title-product{
+  font-family: 'Pacifico', cursive;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  text-align: center;
+} 
+
+span.title-contact{
+  font-family: 'Pacifico', cursive;
+  font-weight: 500;
+  font-size: 26px;
+  color: white;
+  display: flex;
+  justify-content: center;
+} 
+
+.social a {
+  color: white;
+}
+
+.services p{
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+  padding-right: 30px;
+  padding-left: 30px;
+  text-align: center;
+}
+
+.services strong{
+  font-weight: 500;
+}
+
+.services .btn{
+  padding: 10px 30px;
+  margin-top: 4px;
+}
+
+.modal-footer {
+  padding: 4px !important;
+}
+
+.modal-body {
+  padding: 5px !important;
+}
+
+.btn-style-m {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  color: rgb(31, 5, 25);
+}
+
+ul.list-style-a{
+ list-style: none;
+ line-height: 1.5;
+ text-align: right;
+}
+
+ul.list-style-b{
+ list-style: none;
+ line-height: 1.5;
+ text-align: left;
+}
+
+li.item-list{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+}
+
+h3.style-a{
+  font-weight: bold; 
+  color: white; 
+  font-size: 14px;
+}
+
+.social a{
+ color: white;
+}
+
+.social a:hover{
+ color: white;
+}
+
+
+.social{
+  margin-top: 8px;
+  text-align: center;
+}
+
+
+.social i{
+  margin-right: 25px;
+}
+
+.social i:hover{
+ -webkit-transform: scale(1.2);
+ -moz-transform: scale(1.2);
+ -o-transform: scale(1.2);
+ transition: 0.6s;
+ color: white;
+}
+
+span.title-email{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+
+.btn-style-link{
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 250px;
+  color: rgb(56, 49, 54);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+/**************************************
+Modal's Services - End
+***************************************/
+/**************************************
+Media Queries - Star
+***************************************/
+/*'xs'*/
+@media (min-width: 0px) and (max-width: 767px){
+
+#stage-1,
+#stage-2,
+#stage-3,
+#stage-4{
+    background-position: center;
+    background-size: 100% 110%;
+    width: 100%;
+    height: 50%;
+  }
+
+.el-control {
+    position: relative;
+   
+}
+
+.style-all {
+  position: absolute !important;
+  left: 50% !important;
+  top: 15% !important;
+  transform: translateX(-50%) translateY(-0%) !important;
+  font-size: 18px !important;
+}
+
+p.description {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  opacity: 1 !important;
+  font-size: 12px !important;
+}
+
+
+.btn-style-link#btn-woman,
+.btn-style-link#btn-man,
+.btn-style-link#btn-kids,
+.btn-style-link#btn-pets{
+ position: absolute;
+ left: 50%;
+ top: 75%;
+ transform: translateX(-50%);
+ transition: all 0.6s ease;
+ opacity: 1;
+}
+
+
+
+
+
+}
+
+/*'sm' */
+@media (min-width: 768px) and (max-width: 991px){
+
+#stage-1,
+#stage-2,
+#stage-3,
+#stage-4{
+    background-position: center;
+    background-size: 100% 110%;
+    width: 100%;
+    height: 50%;
+  }
+
+.el-control {
+    position: relative;
+   
+}
+
+.style-all {
+  position: absolute !important;
+  left: 50% !important;
+  top: 15% !important;
+  transform: translateX(-50%) translateY(-0%) !important;
+  font-size: 25px !important;
+}
+
+p.description {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  opacity: 1 !important;
+  font-size: 16px !important;
+}
+
+
+.btn-style-link#btn-woman,
+.btn-style-link#btn-man,
+.btn-style-link#btn-kids,
+.btn-style-link#btn-pets{
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+ transition: all 0.6s ease;
+ opacity: 1;
+}
+
+
+
+}
+
+/*'md'*/
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/*'lg' */
+@media (min-width: 1200px) and (max-width: 1600px){
+.style-all {
+  font-size: 30px !important;
+}
+
+p.description {
+  font-size: 20px !important;
+}
+
+}
+
+/*'xl'*/
+@media (min-width: 1601px) and (max-width: 2048px){
+
+  .style-all {
+  font-size: 32px !important;
+}
+
+p.description {
+  font-size: 22px !important;
+}
+
+
+} 
+
+/**************************************
+Media Queries - End
+***************************************/
